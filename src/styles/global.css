@@ -1,0 +1,48 @@
+@import './variables.css';
+@import './header.css';
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--colorBg);
+}
+
+.topbar {
+    background-color: var(--colorBgBlue);
+    display: flex;
+    width: 100%;
+    color: var(--colorTextPrimary);
+}
+
+.headerContainer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1320px;
+}
+.social-links {
+    display: flex;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 24px 0;
+}
+
+.social-links a {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--colorTextBlack);
+    background: var(--colorTextPrimary);
+}

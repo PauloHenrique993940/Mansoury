@@ -1,0 +1,90 @@
+@import './variables.css';
+
+.headerContainer {
+    min-height: 54px;
+    padding: 0 24px;
+    gap: 24px;
+    flex-wrap: nowrap;
+}
+
+.topbarLeft,
+.topbarRight {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex: 0 0 auto;
+}
+
+.topbarRight {
+    justify-content: flex-end;
+    gap: 22px;
+    white-space: nowrap;
+}
+
+.topbarCenter {
+    display: flex;
+    justify-content: center;
+    flex: 1 1 auto;
+    min-width: 0;
+    white-space: nowrap;
+}
+
+.topbarLabel,
+.topbarContact {
+    font-size: 13px;
+    line-height: 1;
+}
+
+.topbarMessage {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.topbarContact {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.social-links {
+    margin: 0;
+}
+
+.social-links a {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+}
+
+@media (max-width: 768px) {
+    .headerContainer {
+        padding: 12px 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .topbarLeft,
+    .topbarCenter,
+    .topbarRight {
+        justify-content: center;
+        flex: 1 1 100%;
+    }
+
+    .topbarCenter {
+        order: -1;
+    }
+}
+
+@media (max-width: 640px) {
+    .topbarRight {
+        gap: 12px;
+        flex-direction: column;
+    }
+
+    .topbarMessage {
+        text-align: center;
+        line-height: 1.4;
+        white-space: normal;
+    }
+}

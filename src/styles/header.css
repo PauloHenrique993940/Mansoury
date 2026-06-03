@@ -1,5 +1,9 @@
 @import './variables.css';
 
+.siteHeader {
+    width: 100%;
+}
+
 .headerContainer {
     min-height: 54px;
     padding: 0 24px;
@@ -57,6 +61,22 @@
     font-size: 10px;
 }
 
+.headerBanner{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../assets/slider/slider.png');
+    background-size: cover;
+    background-position: center;
+    height: 40rem;
+}
+
+.headerTitle{
+    color: var(--colorTextPrimary);
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
 @media (max-width: 768px) {
     .headerContainer {
         padding: 12px 20px;
@@ -88,3 +108,102 @@
         white-space: normal;
     }
 }
+
+    .mainHeader {
+        background-color: var(--colorTextPrimary);
+        border-bottom: 1px solid var(--colorBorderSoft);
+    }
+
+    .mainHeaderContainer {
+        min-height: 74px;
+        gap: 32px;
+    }
+
+    .brandLogo {
+        color: var(--colorBrandBlue);
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1;
+        text-decoration: none;
+        letter-spacing: 0.01em;
+    }
+
+    .mainNav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 34px;
+        flex: 1 1 auto;
+        list-style: none;
+    }
+
+    .mainNav a {
+        color: #6e665f;
+        font-size: 1.0625rem;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    .mainHeaderActions {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .loginButton,
+    .iconButton {
+        min-height: 32px;
+        border: 1px solid var(--colorBorderSoft);
+        border-radius: 4px;
+        background-color: var(--colorTextPrimary);
+        color: #7b766f;
+    }
+
+    .loginButton {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 0 12px;
+        text-decoration: none;
+        font-size: 0.875rem;
+    }
+
+    .iconButton {
+        width: 32px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    @media (max-width: 1024px) {
+        .mainHeaderContainer {
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-top: 18px;
+            padding-bottom: 18px;
+        }
+
+        .mainNav {
+            order: 3;
+            width: 100%;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .mainHeaderActions {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .brandLogo {
+            font-size: 1.75rem;
+        }
+
+        .loginButton {
+            flex: 1 1 auto;
+            justify-content: center;
+        }
+    }
